@@ -1,0 +1,60 @@
+ @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap");
+
+ .nav-links {
+     display: none;
+     justify-content: center;
+     flex-direction: column;
+     margin-right: 10%;
+     margin-top: 5%;
+     gap: 15px;
+     text-align: center;
+ }
+
+ .nav-links a {
+     text-decoration: none;
+     font-family: "Heebo", sans-serif;
+     font-size: 20px;
+     color: #21243d;
+ }
+
+ .nav-links.active{
+    color: #FF6464;
+ }
+
+ .hamburger-icon {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 40px;
+     height: 35px;
+     margin: 5px;
+ }
+
+ .hamburger-icon-line{
+     display: block;
+     width: 40px;
+     height: 5px;
+     background-color: #21243D;
+ }
+
+ .container-hamburger-icon {
+     display: flex;
+     justify-content: flex-end;
+     margin-top: 2%;
+     margin-right: 2%;
+     /* Aligns children to the right */
+ }
+
+ @media (min-width: 768px) {
+     .nav-links {
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+         gap: 25px;
+         margin-top: 0;
+     }
+
+     .hamburger-icon {
+         display: none;
+     }
+ }
