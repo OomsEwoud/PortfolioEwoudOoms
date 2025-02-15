@@ -1,0 +1,23 @@
+---
+const posts = Object.values(
+    import.meta.glob("../pages/posts/*.md", { eager: true }),
+);
+---
+
+<div class="recent-posts-container">
+    <div class="recent-posts-header">
+        <h2>Recent posts</h2>
+        <a href="/blog">View all</a>
+    </div>
+    <div class="recent-posts">
+        {
+            posts.map((post: any) => (
+                <article class="recent-post">
+                    <h3>{post.frontmatter.title}</h3>
+                    <p>{post.frontmatter.date}</p>
+                    <p>{post.frontmatter.description}</p>
+                </article>
+            ))
+        }
+    </div>
+</div>

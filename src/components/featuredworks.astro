@@ -1,0 +1,25 @@
+---
+const posts = Object.values(
+    import.meta.glob("../pages/works/*.md", { eager: true }),
+);
+---
+
+<div class="featured-works-container">
+    <h2>Featured works</h2>
+
+    {
+        posts.map((post: any) => (
+            <article class="featured-work">
+                <img
+                    src={post.frontmatter.image}
+                    alt="Een eigen gemaakt dashboard"
+                />
+                <h3>{post.frontmatter.title}</h3>
+                <div class="featured-work-date">{post.frontmatter.date}</div>
+                <p class="featured-work-theme">{post.frontmatter.theme}</p>
+                <p>{post.frontmatter.description}</p>
+                <hr />
+            </article>
+        ))
+    }
+</div>

@@ -1,6 +1,12 @@
  @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap");
 
- .nav-links {
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+ }
+
+ nav {
      display: none;
      justify-content: center;
      flex-direction: column;
@@ -8,19 +14,19 @@
      text-align: center;
  }
 
- .nav-links.show {
+ nav.show {
      display: flex;
  }
 
- .nav-links a {
+ nav a {
      text-decoration: none;
      font-family: "Heebo", sans-serif;
      font-size: 20px;
      color: #21243d;
  }
 
- .nav-links.active{
-    color: #FF6464;
+ nav a.active {
+     color: #FF6464;
  }
 
  .hamburger-icon {
@@ -32,7 +38,7 @@
      margin: 5px;
  }
 
- .hamburger-icon-line{
+ .hamburger-icon-line {
      display: block;
      width: 40px;
      height: 5px;
@@ -47,8 +53,136 @@
      /* Aligns children to the right */
  }
 
+ .aboutme-button {
+     background-color: #FF6464;
+     color: white;
+     border-radius: 2px;
+     border: none;
+     font-family: "Heebo", sans-serif;
+     font-size: 20px;
+     padding: 0.5%;
+ }
+
+ h1 {
+     font-family: "Heebo", sans-serif;
+     font-weight: bold;
+     font-size: 44px;
+     color: #21243d;
+     line-height: 1.2;
+ }
+
+ p {
+     font-family: "Heebo", sans-serif;
+     font-size: 16px;
+     color: #21243d;
+ }
+
+ .aboutme {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     flex-direction: column-reverse;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 20px;
+ }
+
+ .aboutme-image img {
+     display: flex;
+     justify-content: center;
+     border-radius: 50%;
+     width: 170px;
+     height: 170px;
+ }
+
+ .recent-posts-container {
+     background-color: #EDF7FA;
+     display: flex;
+     flex-direction: column;
+ }
+
+ h2 {
+     font-family: "Heebo", sans-serif;
+     font-size: 22px;
+     color: #21243D;
+     font-weight: normal;
+     text-align: center;
+ }
+
+ .recent-posts-container a {
+     display: none;
+ }
+
+ .recent-post {
+     background-color: white;
+     margin-left: 5%;
+     margin-right: 5%;
+     padding: 0.1% 5% 0.1% 5%;
+     margin-bottom: 1rem;
+ }
+
+h3 {
+     font-family: "Heebo", sans-serif;
+     font-size: 22px;
+     color: #21243D;
+     font-weight: bold;
+ }
+
+ .recent-post p {
+     font-family: "Heebo", sans-serif;
+     font-size: 16px;
+     color: #21243D;
+ }
+
+ footer {
+     display: flex;
+     flex-direction: column;
+ }
+ .footer-images-container{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+ }
+
+ .footer-images {
+     width: 30px;
+     height: 30px;
+ }
+
+ .footer-text{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #21243D;
+ }
+
+ .featured-works-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+ }
+
+ .featured-work{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .featured-work h3{
+    text-align: left;
+ }
+
+
+ .featured-work img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+ }
+
  @media (min-width: 768px) {
-     .nav-links {
+     nav {
          display: flex;
          flex-direction: row;
          justify-content: flex-end;
@@ -59,5 +193,73 @@
 
      .hamburger-icon {
          display: none;
+     }
+
+     .aboutme {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         flex-wrap: nowrap;
+         text-align: left;
+         margin-top: 2%;
+     }
+
+     .aboutme-text {
+         padding-left: 5%;
+         padding-right: 20px;
+     }
+
+     .aboutme-image {
+         flex: 0 0 243px;
+         display: flex;
+         justify-content: center;
+         padding-right: 5%;
+         margin-left: 2%;
+     }
+
+     .aboutme-image img {
+         width: 243px;
+         height: 243px;
+     }
+
+     .recent-posts-container {
+         margin-left: 0;
+     }
+
+     h2 {
+         text-align: left;
+         padding-left: 6%;
+     }
+
+     .recent-posts {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+     }
+
+     .recent-post {
+         padding: 0% 1% 0%;
+
+     }
+
+     .recent-post a {
+         text-align: right;
+     }
+
+     .recent-posts-container a {
+         display: flex;
+         text-decoration: none;
+         font-family: "Heebo", sans-serif;
+         font-size: 16px;
+         color: #00a8cc;
+         text-align: right;
+         margin-right: 5%;
+     }
+
+     .recent-posts-header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
      }
  }
